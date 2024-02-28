@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="ie=edge"
+    />
+    <meta
+      name="description"
+      content="Example of web-component dynamic injection"
+    />
+    <link
+      rel="stylesheet"
+      href="../style.css"
+    />
+    <title>Web component dynamic injection</title>
+    <style>
+      #container {
+        border: 0.5rem var(--color-accent-1) solid;
+        padding: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Some webpage</h1>
+    <h2>Some content</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla tristique augue sit amet condimentum sagittis.
+      Phasellus eget dolor ac augue consectetur gravida id eget elit. Nam sed libero vitae arcu sagittis dictum nec
+      posuere ipsum. Integer vulputate vulputate sagittis. Mauris pellentesque sapien metus, sed lacinia dui euismod sit
+      amet. Aliquam vitae nulla ut sem bibendum condimentum ultrices non ante. Cras quis molestie nibh. Duis egestas
+      urna lorem, tristique laoreet diam lacinia ac. Maecenas nunc quam, efficitur a tellus non, mattis pulvinar est.
+    </p>
+    <h2>Container for web-component</h2>
+    <div id="container">
+      <button id="inject-app">Inject App</button>
+    </div>
+    <footer>
+      <p>Copyright</p>
+    </footer>
+    <script
+      type="module"
+      src="./index.js"
+    ></script>
+  </body>
+</html>

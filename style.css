@@ -1,42 +1,44 @@
 @font-face {
-    font-family: 'JetBrains Mono';
-    src: url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2-variations'),
-    url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'JetBrains Mono';
+  src:
+    url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2')
+      format('woff2-variations'),
+    url('https://raw.githubusercontent.com/JetBrains/JetBrainsMono/master/fonts/webfonts/JetBrainsMono-Regular.woff2')
+      format('woff2');
+  font-weight: normal;
+  font-style: normal;
 }
 
 :root {
-    --color-primary: #272727;
-    --color-primary-dark: #202124;
-    --color-primary-light: #333;
-    --color-accent-1: #3fba84;
-    --color-accent-2: #263238;
-    --color-text: #d6d6d6;
-    --color-text-on-accent-1: #000;
+  --color-primary: #272727;
+  --color-primary-dark: #202124;
+  --color-primary-light: #333;
+  --color-accent-1: #3fba84;
+  --color-accent-2: #263238;
+  --color-text: #d6d6d6;
+  --color-text-on-accent-1: #000;
 }
 
 :root {
-    font-size: 1rem;
-    font-family: 'JetBrains Mono', monospace;
-    background-color: var(--color-primary-dark);
-    color: var(--color-text);
-}
-
-html {
-    width: 100%;
-    height: 100%;
+  font-size: 1rem;
+  font-family: 'JetBrains Mono', monospace;
+  background-color: var(--color-primary-dark);
+  color: var(--color-text);
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
 }
 
 *,
 ::after,
 ::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--color-accent-1);
 }
