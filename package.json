@@ -1,0 +1,19 @@
+{
+  "name": "web-components-vs-frameworks",
+  "version": "1.0.0",
+  "description": "Repo with examples used in presentation",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "git config core.hooksPath ./git-hooks",
+    "prettyprint:fix": "prettier --write ."
+  },
+  "keywords": [
+    "web-components",
+    "presentation"
+  ],
+  "author": "Krzsyztof Kaczyński",
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.2.5"
+  }
+}
