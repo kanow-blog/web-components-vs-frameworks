@@ -7,7 +7,7 @@ const template = `
 </section>
 `;
 
-export class KkApplication extends HTMLElement {
+export class KKApplication extends HTMLElement {
   static TAG = 'kk-application';
 
   constructor() {
@@ -52,4 +52,4 @@ export class KkApplication extends HTMLElement {
   }
 }
 
-customElements.define(KkApplication.TAG, KkApplication);
+customElements.define(KKApplication.TAG, KKApplication);

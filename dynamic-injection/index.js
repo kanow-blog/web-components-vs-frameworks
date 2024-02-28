@@ -22,13 +22,13 @@ const importAppModule = async () => {
   await wait(2000);
   let module = null;
   try {
-    module = await import('./kk-application.js');
+    module = await import('./KKApplication.js');
   } catch (_e) {
     console.log(`Couldn't load app`);
   } finally {
     appLoader.remove();
   }
-  return module.KkApplication;
+  return module.KKApplication;
 };
 
 const injectApp = () => {
