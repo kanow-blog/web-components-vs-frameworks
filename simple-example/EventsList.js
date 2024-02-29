@@ -21,28 +21,26 @@ const template = `
 `;
 
 export class EventsList extends HTMLElement {
+  static TAG = 'kk-events-list';
 
-    static TAG = 'kk-events-list';
+  eventsWrapper;
 
-    eventsWrapper;
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = template;
+    this.getElementReferences();
+  }
 
-    constructor() {
-        super();
-        this.attachShadow({mode: 'open'});
-        this.shadowRoot.innerHTML = template;
-        this.getElementReferences();
-    }
+  getElementReferences() {
+    this.eventsWrapper = this.shadowRoot.querySelector('ul');
+  }
 
-    getElementReferences() {
-        this.eventsWrapper = this.shadowRoot.querySelector('ul');
-    }
-
-    addEvent(eventContent) {
-        const eventWrapper = document.createElement('li');
-        eventWrapper.textContent = eventContent;
-        this.eventsWrapper.append(eventWrapper);
-    }
-
+  addEvent(eventContent) {
+    const eventWrapper = document.createElement('li');
+    eventWrapper.textContent = eventContent;
+    this.eventsWrapper.append(eventWrapper);
+  }
 }
 
 customElements.define(EventsList.TAG, EventsList);

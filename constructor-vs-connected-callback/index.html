@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta
+      http-equiv="X-UA-Compatible"
+      content="ie=edge"
+    />
+    <meta
+      name="description"
+      content="Simple example of WebComponents usage"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../style.css"
+    />
+    <title>WebComponents Constructor vs ConnectedCallback</title>
+  </head>
+  <body>
+    <h1>WebComponents Constructor vs ConnectedCallback</h1>
+    <section id="example-1">
+      <h2>Example 1</h2>
+      <p><code>cloneNode</code> + WebComponent already included in index.html + constructor</p>
+      <p>
+        I am adding a web-component directly to html file. In this case, I am NOT getting an error and the reference to
+        ComponentB instance which I get using .querySelector is an instance of ComponentB. hello method of custom
+        web-component is called from <code>constructor</code>
+      </p>
+      <p style="color: green">WORKS</p>
+      <example-1-component-a></example-1-component-a>
+    </section>
+    <hr />
+    <section id="example-2">
+      <h2>Example 2</h2>
+      <p><code>innerHTML</code> + append WebComponent from JS level + constructor</p>
+      <p>
+        In this example, I am creating a web-component inside js file and then directly appending it to document. In
+        this case. I am NOT getting an error and the reference to ComponentB instance which I get using
+        <code>.querySelector</code> is an instance of ComponentB. hello method of custom web-component is called from
+        <code>constructor</code>
+      </p>
+      <p style="color: green">WORKS</p>
+    </section>
+    <hr />
+    <section id="example-3">
+      <h2>Example 3</h2>
+      <p>
+        In this example, I am creating a web-component inside js file and then directly appending it to document.body. I
+        am getting an error and the reference to ComponentB instance which I get using
+        <code>.querySelector</code> is NOT an instance of ComponentB. hello method of custom web-component is called
+        from
+        <code>connectedCallback</code>
+      </p>
+      <p style="color: red">BROKEN</p>
+    </section>
+    <hr />
+    <section id="example-4">
+      <h2>Example 4</h2>
+      <p>
+        <code>cloneNode</code> + append WebComponent from JS level + getting references to the elements in constructor
+      </p>
+      <p>
+        In this example, I am creating a web-component inside js file and then directly appending it to document.body.
+        In this case, I am getting an error that .hello doesn't exist in my ComponentB. What's more, the reference to
+        ComponentB instance which I get using .querySelector is NOT an instance of ComponentB.
+      </p>
+      <p style="color: red">BROKEN</p>
+    </section>
+    <script
+      type="module"
+      src="./index.js"
+    ></script>
+  </body>
+</html>
