@@ -2,7 +2,6 @@ import { NewEventInput } from './NewEventInput.js';
 import { EventsList } from './EventsList.js';
 
 const template = `
-<link rel="stylesheet" type="text/css" media="screen" href="./shared-styles.css" />
 <style>
 :host {
   height: 100%;
@@ -14,6 +13,9 @@ const template = `
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+kk-events-list::part(list-title) {
+  border-bottom: var(--color-accent-1) solid 0.25rem;
 }
 </style>
 <main id="container">

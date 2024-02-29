@@ -3,6 +3,10 @@ const template = `
   :host {
     display: block;
     width: 100%;
+    transition: background 300ms ease-in-out;
+  }
+  :host(:hover) {
+    background: var(--color-primary-light);
   }
   h2 {
   text-align: center;
@@ -16,7 +20,7 @@ const template = `
     overflow-y: auto;
   }
 </style>
-<h2>Events list:</h2>
+<h2 part="list-title">Events list:</h2>
 <ul class="events-list"></ul>
 `;
 
